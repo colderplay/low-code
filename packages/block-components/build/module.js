@@ -15,12 +15,8 @@ const config = {
     commonjs(),
     resolve(),
     vue({
-      style: {
-        postcssPlugins: [
-          autoprefixer(),
-          cssnano()
-        ]
-      }
+      css: true,
+      compileTemplate: true
     }),
     replace({
         'process.env.NODE_ENV':JSON.stringify('production'),

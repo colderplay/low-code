@@ -11,7 +11,7 @@ const handleClick = () => {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .box {
   background: red;
   color: aqua;
