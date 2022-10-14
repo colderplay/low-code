@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "slib:es": "node build/module"
+    "slib:es": "node build/module",
+    "build:es": "rollup -c --format es --file dist/components.esm.js"
   },
   "dependencies": {
     "@babel/core": "^7.19.3",
@@ -25,11 +26,13 @@
     "rollup": "^2.79.1",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-css-porter": "^1.0.2",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-replace": "^2.2.0",
     "rollup-plugin-scss": "^3.0.0",
     "rollup-plugin-vue": "^6.0.0",
     "sass": "^1.55.0",
+    "sass-loader": "^13.1.0",
     "vue": "^3.2.37"
   },
   "devDependencies": {

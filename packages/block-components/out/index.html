@@ -6,26 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@3.2.40/dist/vue.global.min.js"></script>
-    <!-- <script  src="./bundle.js"></script> -->
+    <!-- <link rel="stylesheet" href="./bundle.css"> -->
   </head>
   <body>
     <div id="app">
-      {{count}}
-      <hello></hello>
+     
     </div>
   </body>
 
   <script type="module">
-    import DemoUI from "./bundle.js";
-    const { createApp } = Vue;
+    import { HelloWorld } from "./bundle.js";
+    const { createApp, h } = Vue;
     const app = createApp({
       data() {
         return {
           count: 0,
         };
       },
+      render() {
+        return h("div", [h(HelloWorld)]);
+      },
     });
-    app.use(DemoUI);
+    // app.use(DemoUI);
     app.mount("#app");
   </script>
 </html>
